@@ -1,0 +1,18 @@
+{% block vvvebjs_widget %}
+    <div {{ stimulus_controller('makraz--ux-vvvebjs--vvvebjs', {
+        components: attr.value('data-components'),
+        plugins: attr.value('data-plugins'),
+        'extra-options': attr.value('data-extra-options'),
+        'cdn-url': attr.value('data-cdn-url'),
+    }) }}>
+        <input {{ stimulus_target('makraz--ux-vvvebjs--vvvebjs', 'input') }}
+               type="hidden"
+               id="{{ id }}"
+               name="{{ full_name }}"
+               value="{{ value }}"
+        />
+        <div {{ stimulus_target('makraz--ux-vvvebjs--vvvebjs', 'editorContainer') }}
+             style="position: relative;"
+        ></div>
+    </div>
+{% endblock %}
